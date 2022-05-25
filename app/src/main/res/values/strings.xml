@@ -14,5 +14,6 @@
     <string name="_0">0</string>
     <string name="plus">+</string>
     <string name="equals">=</string>
+    <string name="decimal">.</string>
 
 </resources>

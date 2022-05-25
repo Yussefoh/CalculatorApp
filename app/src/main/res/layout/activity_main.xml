@@ -169,10 +169,20 @@
 
         <Button
             android:layout_margin="2dp"
+            android:id="@+id/btnDecimal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDecimal"
+            android:text="@string/decimal"
+            />
+
+        <Button
+            android:layout_margin="2dp"
             android:id="@+id/btn0"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:onClick="onDigit"
             android:text="@string/_0"
             />

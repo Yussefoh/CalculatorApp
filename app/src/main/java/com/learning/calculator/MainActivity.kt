@@ -9,6 +9,8 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     private var tvInput: TextView? = null
+    var lastNumeric : Boolean = false
+    var hasDecimal : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +21,19 @@ class MainActivity : AppCompatActivity() {
 
     fun onDigit(view: View) {
         tvInput?.append((view as Button).text)
+        lastNumeric = true;
+        hasDecimal = false;
     }
 
     fun onClear(view: View) {
         tvInput?.text = ""
+    }
+
+    fun onDecimal(view: View) {
+        if(lastNumeric && !hasDecimal) {
+            tvInput?.append(".")
+            lastNumeric = false;
+            hasDecimal = true;
+        }
     }
 }
